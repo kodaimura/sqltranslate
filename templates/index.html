@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ja">
+ <head>
+ <meta charset="utf-8">
+ <title>SQL翻訳</title>
+ <link rel="stylesheet" href="static/css/style.css">
+ <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+ </head>
+
+ <body>
+ <header class="d-flex align-items-center">
+    <span class="ml-5">SQL翻訳</span>
+ </header>
+<div class="form-row w-75 ml-5 mt-3">
+<div class="col">
+    <button class="btn dropdown-toggle btn-outline-secondary mb-1">SQL</button>
+    <textarea class="form-control" rows="10" id="sql"></textarea>
+    <div class="text-right">
+        <button class="btn btn-info btn-lg mt-1" id="translate">翻訳</button>
+    </div>
+</div>
+<span>→</span>
+<div class="col ml-1">
+    <button class="btn dropdown-toggle btn-outline-secondary mb-1">日本語</button>
+    <textarea class="form-control" rows="10" id="result" readonly>翻訳</textarea>
+</div>
+</div>
+<div class="w-50 ml-5 mt-3">
+<b>※ 下記のみ対応</b>
+<ul class="list-group">
+<li class="list-group-item">SELECT, FROM, WHERE, ORDER BY, ASC, DESC, AS</li>
+<li class="list-group-item">UNION [ALL], AND, OR, NOT, IN, EXISTS</li>
+<li class="list-group-item" >+, -, /, *, =, !=, &lt&gt, <=, >=, <, ></li>
+<li class="list-group-item">副問い合わせ</li>
+<li class="list-group-item">数値, 文字列</li>
+<li class="list-group-item">任意テーブル名, 任意列名</li>
+</ul>
+</div>
+<script src="static/js/index.js"></script>
+</body>
+</html>
